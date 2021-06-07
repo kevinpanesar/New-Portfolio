@@ -18,6 +18,7 @@ import Projects from './Components/Projects';
 
 
 
+
 function App() {
 
   const [theme, themeToggler] = useDarkMode();
@@ -31,13 +32,13 @@ function App() {
           <GlobalStyles />
           <div className="App">
             {/* <Toggle theme={theme} toggleTheme={themeToggler} /> */}
-            <Intro theme={theme} toggleTheme={themeToggler} />
-            <AboutMe>
+            <Intro theme={theme} toggleTheme={themeToggler} id="Home" />
+            <AboutMe id="About">
             </AboutMe>
             <Zoom ssrFadeout>
-              <Skills theme={theme}/>
+              <Skills theme={theme} id="Skills" />
             </Zoom>
-            <Projects/>
+            <Projects id="Projects" />
             <div>
               <SideNavBar open={open} setOpen={setOpen} />
               <Menu open={open} setOpen={setOpen} />

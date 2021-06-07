@@ -10,71 +10,106 @@ import ReactImg from '../images/react.png'
 import Sass from '../images/sassLogo.png'
 import Redux from '../images/Redux.png'
 import Styled from '../images/styled.png'
+import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 
 function Skills({ theme }) {
     return (
         <FullPageSectionWrapper>
             <TitleAndProgessBarWrapper>
-                <HeaderText>
-                    Skills & Experience
-            </HeaderText>
-                <SkillLevelWrapper>
-                    <SkillItemWrapper>
-                        <p>React</p>
-                        <ProgressBar skillLevel={80} backgroundColor={'#ff2253'} />
-                    </SkillItemWrapper>
-                    <SkillItemWrapper>
-                        <p>Redux</p>
-                        <ProgressBar skillLevel={60} backgroundColor={'#08fdd8'}/>
-                    </SkillItemWrapper>
-                    <SkillItemWrapper>
-                        <p>CSS</p>
-                        <ProgressBar skillLevel={80} backgroundColor={'#d26cd5'}/>
-                    </SkillItemWrapper>
-                    <SkillItemWrapper>
-                        <p>JavaScript</p>
-                        <ProgressBar skillLevel={90} backgroundColor={'#7510F7'}/>
-                    </SkillItemWrapper>
-                </SkillLevelWrapper>
+                <Slide left>
+                    <HeaderText>
+                        Skills & Experience
+                     </HeaderText>
+                </Slide>
+                <Slide left>
+                    <SkillLevelWrapper>
+                        <SkillItemWrapper>
+                            <p>React</p>
+                            <ProgressBar skillLevel={80} backgroundColor={'#ff2253'} />
+                        </SkillItemWrapper>
+                        <SkillItemWrapper>
+                            <p>Redux</p>
+                            <ProgressBar skillLevel={60} backgroundColor={'#08fdd8'} />
+                        </SkillItemWrapper>
+                        <SkillItemWrapper>
+                            <p>CSS</p>
+                            <ProgressBar skillLevel={80} backgroundColor={'#d26cd5'} />
+                        </SkillItemWrapper>
+                        <SkillItemWrapper>
+                            <p>JavaScript</p>
+                            <ProgressBar skillLevel={90} backgroundColor={'#7510F7'} />
+                        </SkillItemWrapper>
+                    </SkillLevelWrapper>
+                </Slide>
             </TitleAndProgessBarWrapper>
+
             <SkillNamesWrapper>
-                <SkillName >
-                    <SkillImg src={JavaScript} />
-                    <p>JavaScript</p>
-                </SkillName >
-                <SkillName >
-                    <SkillImg src={HTML} />
-                    <p>HTML5</p>
-                </SkillName >
-                <SkillName >
-                    <SkillImg src={CSS} />
-                    <p>CSS3</p>
-                </SkillName >
-                <SkillName >
-                    <SkillImg src={ReactImg} />
-                    <p>React</p>
-                </SkillName >
-                <SkillName >
-                    <SkillImg src={Sass} />
-                    <p>SASS</p>
-                </SkillName >
-                <SkillName >
-                    <SkillImg src={Bootstrap} />
-                    <p>Bootstrap</p>
-                </SkillName >
-                <SkillName >
-                    <SkillImg src={Git} />
-                    <p>Git</p>
-                </SkillName >
-                <SkillName >
-                    <SkillImg src={Redux} />
-                    <p>Redux</p>
-                </SkillName >
-                <SkillName >
-                    <SkillImg src={Styled} />
-                    <p>Styled Components</p>
-                </SkillName >
+                <Fade delay={500} bottom>
+                    <SkillName >
+                        <SkillImg src={JavaScript} />
+                        <p>JavaScript</p>
+                    </SkillName >
+                </Fade>
+                <Fade delay={700} bottom>
+                    <SkillName >
+                        <SkillImg src={HTML} />
+                        <p>HTML5</p>
+                    </SkillName >
+                </Fade>
+                <Fade delay={900} bottom>
+
+                    <SkillName >
+                        <SkillImg src={CSS} />
+                        <p>CSS3</p>
+                    </SkillName >
+                </Fade>
+                <Fade delay={1100} bottom>
+                    <SkillName >
+                        <SkillImg src={ReactImg} />
+                        <p>React</p>
+                    </SkillName >
+                </Fade>
+                <Fade delay={1300} bottom>
+                    <SkillName >
+                        <SkillImg src={Sass} />
+                        <p>SASS</p>
+                    </SkillName >
+                </Fade>
+                <Fade delay={1500} bottom>
+                    <SkillName >
+                        <SkillImg src={Bootstrap} />
+                        <p>Bootstrap</p>
+                    </SkillName >
+                </Fade>
+                <Fade delay={1700} bottom>
+                    <SkillName >
+                        <SkillImg src={Git} />
+                        <p>Git</p>
+                    </SkillName >
+                </Fade>
+                <Fade delay={1900} bottom>
+                    <SkillName >
+                        <SkillImg src={Redux} />
+                        <p>Redux</p>
+                    </SkillName >
+                </Fade>
+                <Fade delay={2100} bottom>
+                    <SkillName >
+                        <SkillImg src={Styled} />
+                        <p>Styled Components</p>
+                    </SkillName >
+                </Fade>
+
+
+
+
+
+
+
+
             </SkillNamesWrapper>
+
         </FullPageSectionWrapper>
     )
 }
@@ -83,12 +118,14 @@ export default Skills
 
 const FullPageSectionWrapper = styled.div`
     width: 100vw;
-    height: 100vh;
     max-width:100%;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    @media (max-width: 2100px) {
+  }
     
 `
 
@@ -98,6 +135,10 @@ const HeaderText = styled.p`
     text-align: left;
     font-size: 90px;
     line-height: 1.2;
+
+        @media (max-width: 2100px) {
+         font-size: 70px;
+  }
     `
 
 const SkillLevelWrapper = styled.div`
@@ -116,12 +157,18 @@ const SkillItemWrapper = styled.div`
         font-family: 'Montserrat', sans-serif;
         font-size: 25px;
     }
+
+    @media (max-width: 2100px) {
+           p{
+        font-size: 20px;
+    }
+  }
 `
 const TitleAndProgessBarWrapper = styled.div`
     display:  flex;
     flex-direction: column;
     margin-left: 150px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 600px;
 `
 const SkillNamesWrapper = styled.div`
@@ -129,24 +176,41 @@ const SkillNamesWrapper = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
 `
 
 const SkillName = styled.div`
-    width: 200px;
+    width: 150px;
+    height: 140px;
     background-color: #7510F7;
     padding: 20px;
     border-radius: 20px;
+    margin: 20px;
     p{
         font-family: 'Montserrat', sans-serif;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 600;
         color: white;
         margin-top: 10px;
     }
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    @media (max-width: 2100px) {
+        width: 160px;
+        height: 120px;
+
+    p{
+        font-size: 20px;
+    }
+    }
 `
 
 const SkillImg = styled.img`
-    height: 120px;
+    height: 100px;
+    @media (max-width: 2100px) {
+        height: 80px;
+    }
 
 `

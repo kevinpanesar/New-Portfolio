@@ -23,6 +23,7 @@ const ScrollDownContainer = styled.aside`
   left: 0;
   bottom: 0;
   margin-left: 25px;
+  margin-bottom: 25px;
   height: 50px;
   overflow: hidden;
   z-index: 300;

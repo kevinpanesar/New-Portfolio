@@ -1,29 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
-
+import { HashLink as Link } from 'react-router-hash-link';
 const Menu = ({ open }) => {
-    return (
-        <StyledMenu open={open}>
-            <a href="/" data-hover="Home">
-
-            </a>
-            <a href="/" data-hover="About Me">
-            </a>
-            <a href="/" data-hover="Skills">
-            </a>
-            <a href="/" data-hover="Projects">
-            </a>
-        </StyledMenu>
-    )
+  return (
+    <StyledMenu open={open}>
+      <Link href="Home" data-hover="Home">
+      </Link>
+      <Link to="#About" data-hover="About Me">
+      </Link>
+      <a href="/" data-hover="Skills">
+      </a>
+      <a href="/" data-hover="Projects">
+      </a>
+    </StyledMenu>
+  )
 }
 Menu.propTypes = {
-    open: bool.isRequired,
+  open: bool.isRequired,
 }
 
 const StyledMenu = styled.nav`
+  display: ${({ open }) => open ? 'flex' : 'none'};
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-  display: flex;
+  
   flex-direction: column;
   justify-content: center;
   background-color: white;
@@ -38,7 +38,6 @@ const StyledMenu = styled.nav`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 16%;
  z-index:100;
- 
   a {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
