@@ -27,6 +27,12 @@ const ProgressContainer = styled.div`
     width: 100%;
     background-color: lightgray;
     border-radius: 50px;
+
+    @media (max-width: 1255px) {
+        height: 5px;
+
+        width: 90%;
+  }
 `;
 
 const width = (y) => {
@@ -44,5 +50,10 @@ const FillerStyles = styled.div`
     height: 10px;
     background-color: ${props => props.backgroundColor};
     animation: ${props=>width(props.skillLevel)} 1s ease-in-out 5s 1 forwards;
+
+
+    @media (max-width: 1255px) {
+        height: 5px;
+  }
 `;
 

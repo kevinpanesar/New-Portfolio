@@ -20,12 +20,9 @@ function Intro() {
                 minWidth: 200.00,
                 scale: 1.00,
                 scaleMobile: 1.00,
-                color: 0xa16aff,
+                color: 0x3462ff,
                 backgroundColor: 0xffffff,
-                points: 20.00,
-                maxDistance: 40.00,
-                spacing: 20.00
-
+                points: 20.00
             }))
         }
         return () => {
@@ -40,7 +37,8 @@ function Intro() {
             <Overlay />
             <HeaderWrapper>
                 <Slide>
-                    <HeaderText>
+                    <TitleWrapper>
+                          <HeaderText>
                         Hi,<WavingHand src="https://img.icons8.com/nolan/64/hand.png" /><br />I'm Kevin Panesar<br />Front End
 
                     <HeaderTextSpan>
@@ -49,6 +47,8 @@ function Intro() {
                         </Highlight>
                         </HeaderTextSpan>
                     </HeaderText>
+                    </TitleWrapper>
+                  
                 </Slide>
             </HeaderWrapper>
             <ScrollDown />
@@ -66,9 +66,11 @@ const FullPageSectionWrapper = styled.div`
     background-color: white;
     overflow: hidden;
 
-  @media (max-width: 2100px) {
+  @media (max-width: 768px) {
     height: 100vh;
   }
+
+
 `
 
 const HeaderWrapper = styled.div`
@@ -77,9 +79,6 @@ const HeaderWrapper = styled.div`
     justify-content: center;
     width: 100vw;
     height: 100vh;
-     @media (max-width: 2100px) {
-    height: 75vh;
-  }
 `
 
 const HeaderText = styled.p`
@@ -89,9 +88,47 @@ const HeaderText = styled.p`
     font-size: 90px;
     margin-left: 150px;
     line-height: 1.2;
+    background-color: white;
+    display:inline-block;
 
     @media (max-width: 2100px) {
       font-size: 70px;
+  }
+
+   @media (max-width: 1500px) {
+      font-size: 60px;
+  }
+
+     @media (max-width: 1255px) {
+      font-size: 50px;
+  }
+
+    @media (max-width: 1080px) {
+        font-size: 45px;
+        margin-left: 120px;
+  }
+
+
+    @media (max-width: 768px) {
+        font-size: 40px;
+        background-color: white;
+        margin-left: 0px;
+        
+  }
+
+  
+
+`
+
+const TitleWrapper = styled.div`
+    width: 100%;
+    display: flex;
+
+
+    @media (max-width: 768px) {
+        background-color: white;
+        justify-content: center;
+
   }
 
 `
@@ -139,6 +176,12 @@ const Highlight = styled.div`
 	background-position: 0px 0px;
 	animation: ${highlight} 1s ease-in-out 1s 1 forwards;
     padding: 0 10px;
+    @media (max-width: 610px) {
+        background-color: white;
+        justify-content: center;
+        display: block;
+
+  }
 `;
 
 const Overlay = styled.div`
@@ -154,3 +197,4 @@ const Overlay = styled.div`
   z-index: 1500; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
 `
+

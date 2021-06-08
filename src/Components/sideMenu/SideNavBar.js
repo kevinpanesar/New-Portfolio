@@ -26,6 +26,10 @@ export const StyledBurger = styled.button`
   padding: 0;
   z-index: 105;
 
+   @media (max-width: 1255px) {
+        height: 1.5rem;
+  }
+
   &:focus {
     outline: none;
   }
@@ -52,6 +56,11 @@ export const StyledBurger = styled.button`
     :nth-child(3) {
       transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
+
+      @media (max-width: 1255px) {
+        width: 1.5rem;
+        height: 0.15rem;
+  }
   }
 `;
 

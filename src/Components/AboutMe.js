@@ -16,11 +16,10 @@ function AboutMe() {
                         About Me
                 </HeaderTitle>
                 </Fade>
-
+                <Fade delay={500} bottom>
                 <HeaderText>
-                    <Fade delay={500} bottom>
-                        <br /> I am a Vancouver based front end developer currently working on building my portfolio by building projects, so I can showcase my passion for design and front-end web development.<br /><br /> My previous work experience is available on Linkedin. Outside of work I enjoy working on cars, and traveling. I am fluent in <UnderLine>HTML, CSS, JavaScript, React, Redux and styled components</UnderLine>. Please do not hesitate to contact me.
-                    </Fade>
+                        <br /> I am a Vancouver based front end developer currently working on building my portfolio by building projects, so I can showcase my passion for design and front-end web development.<br /><br /> My previous work experience is available on Linkedin. Outside of work I enjoy working on cars, and traveling. I am fluent in <UnderLine>HTML, CSS, JavaScript, React, Redux and styled components.</UnderLine> Please do not hesitate to contact me.
+                 
                     <SocialMediaIconsWrapper>
                         <Fade delay={800} bottom>
                             
@@ -46,6 +45,7 @@ function AboutMe() {
                         </Fade>
                     </SocialMediaIconsWrapper>
                 </HeaderText>
+                </Fade>
             </HeaderWrapper>
             <Fade delay={1800} bottom>
                 <AboutMeImg src={aboutMeImage} />
@@ -65,10 +65,16 @@ const FullPageSectionWrapper = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
-     @media (max-width: 2100px) {
-         height: 100vh;
+
+   @media (max-width: 768px) {
+         height: 50vh;
+  }
+  
+  @media (max-width: 610px) {
+    flex-direction: column;
+    height: 100vh;
   }
 
 `
@@ -77,8 +83,9 @@ const HeaderWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40vw;
-    height: 100vh;
+
+
+
 `
 
 const HeaderTitle = styled.p`
@@ -92,6 +99,25 @@ const HeaderTitle = styled.p`
       @media (max-width: 2100px) {
         font-size: 70px;
   }
+
+   @media (max-width: 1255px) {
+        font-size: 50px;
+  }
+
+  @media (max-width: 1080px) {
+        margin-left: 120px;
+        font-size: 45px;
+  }
+
+  @media (max-width: 770px) {
+        margin-left: 50px;
+  }
+
+  @media (max-width: 610px) {
+        text-align: center;
+        margin-left: 0px;
+  }
+
 `
 
 
@@ -104,6 +130,9 @@ a{
     margin-right: 15px;
 }
 
+   @media (max-width: 610px) {
+        justify-content: center
+  }
 
 `
 
@@ -116,18 +145,43 @@ const HeaderText = styled.p`
     margin-left: 150px;
     line-height: 1.4;
 
-       @media (max-width: 2100px) {
+@media (max-width: 2100px) {
       font-size: 20px;
+  }
+
+   @media (max-width: 1255px) {
+        font-size: 17px;
+  }
+
+   @media (max-width: 1080px) {
+        margin-left: 120px;
+         font-size: 15px;
+         width: 400px;
+  }
+
+    @media (max-width: 770px) {
+        margin-left: 50px;
+        width: 70%;
+  }
+
+     @media (max-width: 610px) {
+        margin: 0 auto;
+        width: 80%;
   }
 `
 const AboutMeImg = styled.img`
-    height: 600px;
-    margin-right: 300px;
+    width: 37%;
     border: 10px solid #7510F7;
     padding: 15px;
 
-     @media (max-width: 2100px) {
-      height: 400px;
+
+   @media (max-width: 770px) {
+       width: 150px;
+       margin-right: 15px;
+ }
+
+   @media (max-width: 610px) {
+        margin: 0 auto;
   }
 `
 

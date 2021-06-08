@@ -8,7 +8,7 @@ import Git from '../images/gitLogo.png'
 import HTML from '../images/html.png'
 import ReactImg from '../images/react.png'
 import Sass from '../images/sassLogo.png'
-import Redux from '../images/Redux.png'
+import Redux from '../images/redux.png'
 import Styled from '../images/styled.png'
 import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
@@ -139,6 +139,19 @@ const HeaderText = styled.p`
         @media (max-width: 2100px) {
          font-size: 70px;
   }
+
+   @media (max-width: 1255px) {
+        font-size: 55px;
+  }
+
+    @media (max-width: 1080px) {
+        font-size: 45px;
+  }
+
+     @media (max-width: 608px) {
+        width: 70%;
+        margin: 0 auto;
+    }
     `
 
 const SkillLevelWrapper = styled.div`
@@ -147,6 +160,19 @@ const SkillLevelWrapper = styled.div`
     height: 300px;
     width: 80%;
     overflow: hidden;
+
+    @media (max-width: 1000px) {
+        height: 250px;
+    }
+
+     @media (max-width: 768px) {
+        width: 100%;
+    }
+
+     @media (max-width: 608px) {
+        width: 70%;
+        margin: 0 auto;
+    }
 `
 const SkillItemWrapper = styled.div`
     display: block;
@@ -159,10 +185,18 @@ const SkillItemWrapper = styled.div`
     }
 
     @media (max-width: 2100px) {
-           p{
+        p{
         font-size: 20px;
     }
   }
+
+
+       @media (max-width: 1080px) {
+           height: 250px;
+        p{
+        font-size: 16px;
+    }
+    }
 `
 const TitleAndProgessBarWrapper = styled.div`
     display:  flex;
@@ -170,6 +204,22 @@ const TitleAndProgessBarWrapper = styled.div`
     margin-left: 150px;
     justify-content: space-evenly;
     height: 600px;
+
+
+    @media (max-width: 1255px) {
+        height: 450px;
+  }
+
+  @media (max-width: 1080px) {
+    margin-left: 120px;
+    height: 400px;
+
+  }
+
+    @media (max-width: 768px) {
+    margin: 0 auto;
+
+  }
 `
 const SkillNamesWrapper = styled.div`
     display: flex;
@@ -205,12 +255,39 @@ const SkillName = styled.div`
         font-size: 20px;
     }
     }
+
+    @media (max-width: 1255px) {
+        width: 120px;
+        height: 90px;
+
+    p{
+        font-size: 14px;
+    }
+    }
+
+    @media (max-width: 950px) {
+        width: 80px;
+        height: 70px;
+
+    p{
+        font-size: 12px;
+    }
+    }
+
+    
 `
 
 const SkillImg = styled.img`
     height: 100px;
     @media (max-width: 2100px) {
         height: 80px;
+    }
+      @media (max-width: 1255px) {
+        height: 65px;
+  }
+
+   @media (max-width: 950px) {
+        height: 50px;
     }
 
 `

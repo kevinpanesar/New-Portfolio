@@ -32,6 +32,16 @@ const ScrollDownContainer = styled.aside`
       font-size: 25px;
       font-family: 'Montserrat', sans-serif;
   }
+
+   @media (max-width: 1400px) {
+    margin-left: 15px;
+    margin-bottom: 15px;
+
+       p{
+          font-size: 15px; 
+       }
+         
+  }
 `
 const scroll = keyframes`
 	0% {
@@ -66,6 +76,13 @@ const LineAnimation = styled.div`
         animation-play-state: running;
         animation-name: ${scroll};
 		}
+
+     @media (max-width: 1400px) {
+        width: 20px;
+	height: 1px;
+       
+
+  }
 
 `
 

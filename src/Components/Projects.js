@@ -19,11 +19,11 @@ function Projects() {
                 <Fade left>
                     <ProjectCard side={'right'} left={'auto'}>
                         <ImgWrapper>
-                            <CardImg src={ShopifyImg} width={'300px'} width2100={'260px'} width1500={'230px'}/>
+                            <CardImg src={ShopifyImg} width={'300px'} width2100={'260px'} width1500={'230px'} width1200={'200px'} />
                         </ImgWrapper>
                         <TextWrapper>
                             <CardHeader>Shopify Internship Project</CardHeader>
-                            <CardText>A project made for my application for Shopify's fall batch of interns. Each applicant was required to make the same project. This project was completed under a tight deadline of 4 days. This website is constructed with React, Javascript, CSS, and hosted on Netlify. The application is completely responsive for each screen type, and was tested on different browsers and screens using CrossBrowserTesting. Within 4 days I designed, implemented, hosted, and tested this application.</CardText>
+                            <CardText>A project made for my application for Shopify's fall batch of interns. Each applicant was required to make the same project. This project was completed under a tight deadline of 4 days. This website is constructed with React, Javascript, CSS, and hosted on Netlify. The application is completely responsive for each screen type, and was tested on different browsers and screens using CrossBrowserTesting.</CardText>
                             <WebsiteButton href="https://sharp-northcutt-2d3fab.netlify.app/">Visit Site</WebsiteButton>
                         </TextWrapper>
                     </ProjectCard>
@@ -31,7 +31,7 @@ function Projects() {
                 <Fade right>
                     <ProjectCard side={'right'} right={'auto'}>
                         <ImgWrapper>
-                            <CardImg src={RealEstate} width={'330px'} width2100={'290px'} width1500={'260px'}/>
+                            <CardImg src={RealEstate} width={'330px'} width2100={'290px'} width1500={'260px'} width1200={'220px'}/>
                         </ImgWrapper>
                         <TextWrapper>
                             <CardHeader>Real Estate Project</CardHeader>
@@ -43,7 +43,7 @@ function Projects() {
                 <Fade left>
                     <ProjectCard side={'right'} left={'auto'}>
                         <ImgWrapper>
-                            <CardImg src={AppointmentImg} width={'220px'} width2100={'180px'} width1500={'150px'}/>
+                            <CardImg src={AppointmentImg} width={'220px'} width2100={'180px'} width1500={'150px'} width1500={'150px'}/>
                         </ImgWrapper>
                         <TextWrapper>
                             <CardHeader>Appointments Application</CardHeader>
@@ -55,7 +55,7 @@ function Projects() {
                 <Fade right>
                     <ProjectCard side={'right'} right={'auto'}>
                         <ImgWrapper>
-                            <CardImg src={Calc} width={'130px'} width2100={'110px'} width1500={'90px'}/>
+                            <CardImg src={Calc} width={'130px'} width2100={'110px'} width1500={'90px'} width1000={'50px'}/>
                         </ImgWrapper>
                         <TextWrapper>
                             <CardHeader>Monthly Budget Calculator</CardHeader>
@@ -67,11 +67,11 @@ function Projects() {
                 <Fade left>
                     <ProjectCard side={'right'} left={'auto'}>
                         <ImgWrapper>
-                            <CardImg src={Top} width={'230px'} width2100={'210px'} width1500={'180px'}/>
+                            <CardImg src={Top} width={'230px'} width2100={'210px'} width1500={'180px'} />
                         </ImgWrapper>
                         <TextWrapper>
                             <CardHeader>TopAdvice</CardHeader>
-                            <CardText>A website made with Wordpress for a local business.</CardText>
+                            <CardText>A simple static website made with Wordpress for a local business, that has forms for lead generation. Also incorperated a mortgage calculator widget. Designed and and implemented this website, as well as designed and helped implement the company logo.</CardText>
                             <WebsiteButton href="https://topadvice4u.com/">Visit Site</WebsiteButton>
                         </TextWrapper>
                     </ProjectCard>
@@ -79,7 +79,7 @@ function Projects() {
                 <Fade right>
                     <ProjectCard side={'right'} right={'auto'}>
                         <ImgWrapper>
-                            <CardImg src={Weather} width={'200px'} width2100={'170px'} width1500={'140px'}/>
+                            <CardImg src={Weather} width={'200px'} width2100={'170px'} width1500={'140px'} />
                         </ImgWrapper>
                         <TextWrapper>
                             <CardHeader>Weather Application</CardHeader>
@@ -113,6 +113,17 @@ const HeaderText = styled.p`
      @media (max-width: 2100px) {
          font-size: 70px;
   }
+
+   @media (max-width: 1255px) {
+        margin-top: 100px;
+        font-size: 55px;
+  }
+
+     @media (max-width: 768px) {
+         text-align: center;
+        margin-left: 0px;
+        margin-top: 60px;
+  }
     `
 const ProjectWrapper = styled.div`
         display: flex;
@@ -139,6 +150,8 @@ const ProjectCard = styled.div`
     align-items: center;
     border-radius: 40px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
       @media (max-width: 2100px) {
         width: 53%;
         height: 350px;
@@ -147,6 +160,24 @@ const ProjectCard = styled.div`
   @media (max-width: 1519px) {
       width: 65%;
       height: 300px;
+  }
+
+    @media (max-width: 1519px) {
+      width: 75%;
+      height: 300px;
+  }
+
+   @media (max-width: 768px) {
+         width: 95%;
+          margin-left: auto;
+    margin-right: auto;
+  }
+
+    @media (max-width: 650px) {
+        height: auto;
+        flex-direction: column;
+         padding-bottom: 25px;
+          padding-top: 20px;
   }
 `
 
@@ -159,6 +190,10 @@ const CardImg = styled.img`
 
    @media (max-width: 1519px) {
         width: ${props => props.width1500};
+  }
+
+   @media (max-width: 1200px) {
+        width: ${props=>props.width1200};
   }
 `
 
@@ -175,6 +210,12 @@ const TextWrapper = styled.div`
         height: 70%;
   }
 
+      @media (max-width: 650px) {
+        width: 90%;
+        justify-content: center;
+        height: 50%;
+  }
+
 `
 const CardHeader = styled.p`
     color: white;
@@ -182,6 +223,15 @@ const CardHeader = styled.p`
     margin-bottom: 20px;
     @media (max-width: 1519px) {
         font-size: 25px;
+  }
+   @media (max-width: 900px) {
+        margin-bottom: 15px;
+  }
+
+      @media (max-width: 650px) {
+          padding-top: 20px;
+          text-align: center ;
+          width: 100%;
   }
 `
 
@@ -245,5 +295,13 @@ const ImgWrapper = styled.div`
   @media (max-width: 1519px) {
       width: 270px;
         height: 170px;
+  }
+
+   @media (max-width: 1519px) {
+        width: 37%;
+  }
+
+       @media (max-width: 650px) {
+        width: 90%;
   }
 `

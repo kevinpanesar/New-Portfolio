@@ -40,7 +40,7 @@ const StyledMenu = styled.nav`
  z-index:100;
   a {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     padding: 2rem 0;
@@ -70,6 +70,34 @@ a:after {
 a:hover:after {
   width: 100%;
 }
+
+@media (max-width: 2100px) {
+
+    a{
+        font-size: 18px;
+    }
+    }
+
+    @media (max-width: 1255px) {
+
+    a{
+        font-size: 16px;
+    }
+    }
+
+    @media (max-width: 950px) {
+
+    a{
+        font-size: 12px;
+    }
+    }
+
+     @media (max-width: 950px) {
+
+    a{
+        font-size: 10px;
+    }
+    }
 
 `;
 
