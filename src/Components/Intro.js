@@ -33,7 +33,7 @@ function Intro() {
     }, [vantaEffect])
 
     return (
-        <FullPageSectionWrapper ref={myRef}>
+        <FullPageSectionWrapper ref={myRef} id="Home">
             <Overlay />
             <HeaderWrapper>
                 <Slide>
@@ -83,7 +83,7 @@ const HeaderWrapper = styled.div`
 
 const HeaderText = styled.p`
      color: ${({ theme }) => theme.text};
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 90px;
     margin-left: 150px;
@@ -160,6 +160,11 @@ width: 80px;
   @media (max-width: 2100px) {
     width: 60px;
   }
+
+      @media (max-width: 610px) {
+        width: 40px;
+
+  }
 `
 
 const highlight = keyframes`
@@ -180,7 +185,7 @@ const Highlight = styled.div`
         background-color: white;
         justify-content: center;
         display: block;
-
+        margin-bottom: 15px;
   }
 `;
 

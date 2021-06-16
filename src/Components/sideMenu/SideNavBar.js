@@ -11,24 +11,34 @@ function SideNavBar({ open, setOpen }) {
   )
 }
 
+
 export const StyledBurger = styled.button`
-    position: absolute;
+  position: fixed;
   top: 5%;
   right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   width: 2rem;
-  height: 2rem;
+  height: 2.3rem;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
-  z-index: 105;
+  z-index: 550;
+  background-color: white;
+
+
 
    @media (max-width: 1255px) {
         height: 1.5rem;
   }
+
+     @media (max-width: 750px) {
+          top: 2%;
+          right: 2%;
+  }
+
 
   &:focus {
     outline: none;

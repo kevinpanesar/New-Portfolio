@@ -1,4 +1,4 @@
-import React from 'react'
+import {React,useEffect} from 'react'
 import ProgressBar from './ProgressBar';
 import styled from 'styled-components'
 import JavaScript from '../images/JavaScript-logo.png'
@@ -13,9 +13,13 @@ import Styled from '../images/styled.png'
 import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
 
+
 function Skills({ theme }) {
+
+
+
     return (
-        <FullPageSectionWrapper>
+        <FullPageSectionWrapper id="Skills">
             <TitleAndProgessBarWrapper>
                 <Slide left>
                     <HeaderText>
@@ -100,16 +104,7 @@ function Skills({ theme }) {
                         <p>Styled Components</p>
                     </SkillName >
                 </Fade>
-
-
-
-
-
-
-
-
             </SkillNamesWrapper>
-
         </FullPageSectionWrapper>
     )
 }
@@ -131,7 +126,7 @@ const FullPageSectionWrapper = styled.div`
 
 const HeaderText = styled.p`
      color: black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 90px;
     line-height: 1.2;
@@ -151,6 +146,7 @@ const HeaderText = styled.p`
      @media (max-width: 608px) {
         width: 70%;
         margin: 0 auto;
+        font-size: 40px;
     }
     `
 
@@ -270,7 +266,7 @@ const SkillName = styled.div`
         height: 70px;
 
     p{
-        font-size: 12px;
+        font-size: 13px;
     }
     }
 

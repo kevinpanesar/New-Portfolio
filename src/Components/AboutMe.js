@@ -9,7 +9,7 @@ import { keyframes } from 'styled-components'
 
 function AboutMe() {
     return (
-        <FullPageSectionWrapper>
+        <FullPageSectionWrapper id="AboutMe">
             <HeaderWrapper>
                 <Fade bottom>
                     <HeaderTitle>
@@ -17,34 +17,34 @@ function AboutMe() {
                 </HeaderTitle>
                 </Fade>
                 <Fade delay={500} bottom>
-                <HeaderText>
+                    <HeaderText>
                         <br /> I am a Vancouver based front end developer currently working on building my portfolio by building projects, so I can showcase my passion for design and front-end web development.<br /><br /> My previous work experience is available on Linkedin. Outside of work I enjoy working on cars, and traveling. I am fluent in <UnderLine>HTML, CSS, JavaScript, React, Redux and styled components.</UnderLine> Please do not hesitate to contact me.
-                 
+
                     <SocialMediaIconsWrapper>
-                        <Fade delay={800} bottom>
-                            
-                            <li>
-                                <a href="https://github.com/kevinpanesar">
-                                    <GithubLogo title="Check out my code!" src={githubImg} />
-                                </a>
-                            </li>
-                        </Fade>
-                        <Fade delay={1200} bottom>
-                            <li>
-                                <a href="https://linkedin.com/in/kevin-panesar">
-                                    <LinkedinLogo title="Lets connect on Linkedin!" src={linkedin} />
-                                </a>
-                            </li>
-                        </Fade>
-                        <Fade delay={1500} bottom>
-                            <li>
-                                <a href="mailto: kevin_panesar@hotmail.com">
-                                    <EmailLogo src={email} />
-                                </a>
-                            </li>
-                        </Fade>
-                    </SocialMediaIconsWrapper>
-                </HeaderText>
+                            <Fade delay={800} bottom>
+
+                                <li>
+                                    <a href="https://github.com/kevinpanesar">
+                                        <GithubLogo title="Check out my code!" src={githubImg} />
+                                    </a>
+                                </li>
+                            </Fade>
+                            <Fade delay={1200} bottom>
+                                <li>
+                                    <a href="https://linkedin.com/in/kevin-panesar">
+                                        <LinkedinLogo title="Lets connect on Linkedin!" src={linkedin} />
+                                    </a>
+                                </li>
+                            </Fade>
+                            <Fade delay={1500} bottom>
+                                <li>
+                                    <a href="mailto: kevin_panesar@hotmail.com">
+                                        <EmailLogo src={email} />
+                                    </a>
+                                </li>
+                            </Fade>
+                        </SocialMediaIconsWrapper>
+                    </HeaderText>
                 </Fade>
             </HeaderWrapper>
             <Fade delay={1800} bottom>
@@ -74,7 +74,7 @@ const FullPageSectionWrapper = styled.div`
   
   @media (max-width: 610px) {
     flex-direction: column;
-    height: 100vh;
+    height: auto;
   }
 
 `
@@ -90,7 +90,7 @@ const HeaderWrapper = styled.div`
 
 const HeaderTitle = styled.p`
     color: ${({ theme }) => theme.text};
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 90px;
     margin-left: 150px;
@@ -116,6 +116,8 @@ const HeaderTitle = styled.p`
   @media (max-width: 610px) {
         text-align: center;
         margin-left: 0px;
+        margin-top: 15px;
+        font-size: 40px;
   }
 
 `
@@ -150,12 +152,12 @@ const HeaderText = styled.p`
   }
 
    @media (max-width: 1255px) {
-        font-size: 17px;
+        font-size: 18px;
   }
 
    @media (max-width: 1080px) {
         margin-left: 120px;
-         font-size: 15px;
+         font-size: 17px;
          width: 400px;
   }
 
@@ -181,7 +183,8 @@ const AboutMeImg = styled.img`
  }
 
    @media (max-width: 610px) {
-        margin: 0 auto;
+        margin: 15px auto;
+        width: 250px;
   }
 `
 

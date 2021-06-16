@@ -15,6 +15,8 @@ import AboutMe from './Components/AboutMe';
 import Skills from './Components/Skills.js';
 import Zoom from 'react-reveal/Zoom';
 import Projects from './Components/Projects';
+import styled from 'styled-components'
+
 
 
 
@@ -38,7 +40,7 @@ function App() {
             <Zoom ssrFadeout>
               <Skills theme={theme} id="Skills" />
             </Zoom>
-            <Projects id="Projects" />
+            <Projects/>
             <div>
               <SideNavBar open={open} setOpen={setOpen} />
               <Menu open={open} setOpen={setOpen} />
@@ -52,3 +54,5 @@ function App() {
 }
 
 export default App;
+
+

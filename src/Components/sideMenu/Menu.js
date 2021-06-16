@@ -1,18 +1,63 @@
 import React from 'react';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
-import { HashLink as Link } from 'react-router-hash-link';
-const Menu = ({ open }) => {
+import AboutMe from '../AboutMe';
+import { Link } from 'react-scroll';
+import Projects from '../Projects';
+
+
+
+const Menu = ({ open, setOpen }) => {
   return (
-    <StyledMenu open={open}>
-      <Link href="Home" data-hover="Home">
+    <StyledMenu open={open} >
+      <Link
+        onClick={() => setOpen(!open)}
+        activeClass="active"
+        to="Home"
+        spy={true}
+        smooth={true}
+        hashSpy={true}
+        offset={50}
+        duration={1000}
+        data-hover="Home"
+      >
       </Link>
-      <Link to="#About" data-hover="About Me">
+      <Link
+        onClick={() => setOpen(!open)}
+        activeClass="active"
+        to="AboutMe"
+        spy={true}
+        smooth={true}
+        hashSpy={true}
+        offset={50}
+        duration={1000}
+        data-hover="About Me"
+      >
       </Link>
-      <a href="/" data-hover="Skills">
-      </a>
-      <a href="/" data-hover="Projects">
-      </a>
+      <Link
+        onClick={() => setOpen(!open)}
+        activeClass="active"
+        to="Skills"
+        spy={true}
+        smooth={true}
+        hashSpy={true}
+        offset={50}
+        duration={1000}
+        data-hover="Skills"
+      >
+      </Link>
+      <Link
+        onClick={() => setOpen(!open)}
+        activeClass="active"
+        to="Projects"
+        spy={true}
+        smooth={true}
+        hashSpy={true}
+        offset={50}
+        duration={1000}
+        data-hover="Projects"
+      >
+      </Link>
     </StyledMenu>
   )
 }
@@ -31,16 +76,16 @@ const StyledMenu = styled.nav`
   height: 100vh;
   text-align: left;
   padding: 2rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 16%;
- z-index:100;
+ z-index:500;
   a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
     font-weight: bold;
     text-transform: uppercase;
     padding: 2rem 0;
@@ -99,6 +144,14 @@ a:hover:after {
     }
     }
 
+       @media (max-width: 610px) {
+        width: 100%;
+        padding: 0rem;
+
+         a{
+        font-size: 14px;
+    }
+  }
 `;
 
 export default Menu;

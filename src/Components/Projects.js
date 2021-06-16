@@ -11,7 +11,7 @@ import Fade from 'react-reveal/Fade';
 
 function Projects() {
     return (
-        <FullPageSectionWrapper>
+        <FullPageSectionWrapper id="Projects">
             <HeaderText>
                 Projects
             </HeaderText>
@@ -31,7 +31,7 @@ function Projects() {
                 <Fade right>
                     <ProjectCard side={'right'} right={'auto'}>
                         <ImgWrapper>
-                            <CardImg src={RealEstate} width={'330px'} width2100={'290px'} width1500={'260px'} width1200={'220px'}/>
+                            <CardImg src={RealEstate} width={'330px'} width2100={'290px'} width1500={'260px'} width1200={'220px'} />
                         </ImgWrapper>
                         <TextWrapper>
                             <CardHeader>Real Estate Project</CardHeader>
@@ -43,7 +43,7 @@ function Projects() {
                 <Fade left>
                     <ProjectCard side={'right'} left={'auto'}>
                         <ImgWrapper>
-                            <CardImg src={AppointmentImg} width={'220px'} width2100={'180px'} width1500={'150px'} width1500={'150px'}/>
+                            <CardImg src={AppointmentImg} width={'220px'} width2100={'180px'} width1500={'150px'} width1500={'150px'} />
                         </ImgWrapper>
                         <TextWrapper>
                             <CardHeader>Appointments Application</CardHeader>
@@ -55,7 +55,7 @@ function Projects() {
                 <Fade right>
                     <ProjectCard side={'right'} right={'auto'}>
                         <ImgWrapper>
-                            <CardImg src={Calc} width={'130px'} width2100={'110px'} width1500={'90px'} width1000={'50px'}/>
+                            <CardImg src={Calc} width={'130px'} width2100={'110px'} width1500={'90px'} width1000={'50px'} />
                         </ImgWrapper>
                         <TextWrapper>
                             <CardHeader>Monthly Budget Calculator</CardHeader>
@@ -104,7 +104,7 @@ const FullPageSectionWrapper = styled.div`
 
 const HeaderText = styled.p`
      color: black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 90px;
     line-height: 1.2;
@@ -193,7 +193,7 @@ const CardImg = styled.img`
   }
 
    @media (max-width: 1200px) {
-        width: ${props=>props.width1200};
+        width: ${props => props.width1200};
   }
 `
 
@@ -221,6 +221,7 @@ const CardHeader = styled.p`
     color: white;
     font-size: 32px;
     margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
     @media (max-width: 1519px) {
         font-size: 25px;
   }
